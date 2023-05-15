@@ -58,19 +58,23 @@ def create_dataset():
         suggested_classes = ai_complete(classifier_prompt, temperature=0.7, max_tokens=num_words*3, verbose=False, api_type="azure")
 
         #parse the suggested classes that are separated by commas and create a list
-        suggested_classes_list = suggested_classes.split(",")
+        #suggested_classes_list = suggested_classes.split(",")
+        suggested_classes_list = suggested_classes
 
         #add suggested classes to session state variable
         st.session_state.suggested_classes_list = suggested_classes_list
 
     if st.session_state.suggested_classes_list != []:
-        st.write("The suggested classes are: ", st.session_state.suggested_classes_list)
+        suggested_classes = st.session_state.suggested_classes_list
+        st.write("The suggested classes are: ", suggested_classes)
         #ask the user if he want to modify the suggested classes, if so ask him to enter the new classes separated by commas, defult is the suggested classes
         modify_classes = st.sidebar.checkbox("Modify classes")
             
         if modify_classes:
-                new_classes = st.sidebar.text_input("Please enter the new classes separated by commas", suggested_classes)
+                new_classes = st.text_input("Please enter the new classes separated by commas", suggested_classes)
                 new_classes_list = new_classes.split(",")
+                #remove spaces from the new classes
+                new_classes_list = [x.strip(' ') for x in new_classes_list]
                 st.write("The new classes are: ", new_classes_list)
                 suggested_classes_list = new_classes_list
 
