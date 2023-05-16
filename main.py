@@ -11,6 +11,7 @@ from load_classes import load_classes_df
 from save_classes import save_classes_df
 from load_classified_dataset import load_classified_dataset_df
 from save_classified_dataset import save_classified_dataset_df
+from gpt_statistics import gpt_statistics_df
 
 import pandas as pd
 import datetime
@@ -42,13 +43,7 @@ for key, default_value in session_state_variables:
 st.subheader("GPT ROC")
 st.write("An integrated tool for Text Generation, Classification and Measurement")
 
-if st.session_state.text_items_list:
-    st.write("The dataset contains ", len(st.session_state.text_items_list), " items")
 
-if st.session_state.results:
-    #calculate the number of classifications in the dataset
-    classifications = len(st.session_state.results[0]["classifications"])
-    st.write("The classified dataset contains ", classifications, " classifications")
 
 ##MANAGE DATESET
 
@@ -167,6 +162,34 @@ if load_classified_dataset or st.session_state.load_classified_dataset:
     load_classified_dataset_df()
     st.write("Classified_dataset_loaded")
 
+if st.session_state.results:
+    #ask user if wants to see classified items
+    show_classes_list = st.sidebar.checkbox("Show classified items")
+    if show_classes_list:
+        #st.write("This is the list of classified items:", st.session_state.list_class)
+        st.write("This is the list items and their classes:", st.session_state.results)
+
+
+##STATISTICS
+
+#ask user if want to see statistics
+show_statistics = st.sidebar.checkbox("Show statistics", value=True)
+
+if show_statistics:
+    if st.session_state.text_items_list:
+        st.write("The dataset contains ", len(st.session_state.text_items_list), " items")
+
+    if st.session_state.results:
+        #calculate the number of classifications in the dataset
+        classifications = len(st.session_state.results[0]["classifications"])
+        st.write("The classified dataset contains ", classifications, " classifications")
+
+show_advanced_statistics = st.sidebar.checkbox("Show advanced statistics")
+
+if show_advanced_statistics:
+    gpt_statistics_df()
+
+
 ##MANAGE ENVIRONMENT
 
 #ask user if wants the results to be cleared
@@ -183,12 +206,7 @@ if clear_results:
     st.session_state.load_dataset = False
     st.session_state.create_classes = False
 
-if st.session_state.results:
-    #ask user if wants to see classified items
-    show_classes_list = st.sidebar.checkbox("Show classified items")
-    if show_classes_list:
-        #st.write("This is the list of classified items:", st.session_state.list_class)
-        st.write("This is the list items and their classes:", st.session_state.results)
+
 
     
         
