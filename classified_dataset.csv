@@ -13,15 +13,21 @@ Thank you for your help.
 Sincerely,
 [Your Name]|
 
+Class: Login Issues (text-davinci-003 - classify_dataset)|
+
 
 Subject: Unable to Access Online Banking
 
-Description: I am unable to access my online banking account. I have tried to reset my password but it is not working. Please help.|
+Description: I am unable to access my online banking account. I have tried to reset my password but it is not working. Please help.| 
+
+Class: Login Issues (text-davinci-003 - classify_dataset)|
 
 
 Subject: Credit Card Statement Inquiry
 
 Description: I received my credit card statement and noticed a charge that I did not make. I would like to dispute the charge and have it removed from my account.|
+
+Card Issues (text-davinci-003 - classify_dataset)|
 
 
 Subject: Online Banking Account Issue
@@ -30,10 +36,14 @@ Message:
 
 I am having trouble logging into my online banking account. Whenever I attempt to log in, I receive an error message that says "Login failed." I have tried resetting my password and have verified that I'm entering the correct username, but the issue persists. Can you please help me with this issue?|
 
+Login Issues (text-davinci-003 - classify_dataset)|
+
 
 Subject: Unable to Access Online Banking
 
 Description: I am unable to access my online banking account. I have tried logging in on both my computer and mobile devices and both times I received an error message. Please help me resolve this issue.|
+
+Class: Login Issues (text-davinci-003 - classify_dataset)|
 
 
 Subject: Lost Debit Card
@@ -46,22 +56,32 @@ I recently lost my debit card and would like to request a new one. Please let me
 
 Thank you!|
 
+Card Issues (text-davinci-003 - classify_dataset)|
+
 
 Subject: Unable to Access Online Banking
 
 Description: I am unable to access my online banking account. When I try to login, I receive an error message that my credentials are invalid. I have tried resetting my password multiple times and still cannot log in. Please help.|
+
+Class: Login Issues (text-davinci-003 - classify_dataset)|
 
 
 Ticket: Debit Card Not Working
 
 Description: I recently upgraded my debit card and it is not working. I have tried to use it multiple times and it has been declined. I checked my account balance and there is enough money for the purchases. Please help!|
 
+Class: Card Issues (text-davinci-003 - classify_dataset)|
+
 
 Subject: Transfer From Savings to Checking
 
 Description: I need to transfer $200 from my savings account to my checking account. Please let me know what information you need from me to complete this transaction. Thank you.|
 
+Class: Card Issues (text-davinci-003 - classify_dataset)|
+
 
 Subject: Invalid Payment
 
 Description: I recently received a bank statement which shows an invalid payment of $150 to a merchant. I immediately contacted the merchant who confirmed that no payment was received. Please investigate this and reverse the payment as soon as possible. Thank you.|
+
+Card Issues (text-davinci-003 - classify_dataset)|

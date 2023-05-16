@@ -1,30 +1,77 @@
-0
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
+
+
+Subject: Unable to Access Online Banking
+
+Body:
+
+Good afternoon,
+
+I am having difficulty logging into my online banking account. I have tried to reset my password multiple times but it does not work. I have also tried using different browsers and devices but the same issue persists. Could you please help me resolve this issue as soon as possible?
+
+Thank you for your help.
+
+Sincerely,
+[Your Name]
+  - {'class': '\n\nClass: Login Issues', 'timestamp': datetime.datetime(2023, 5, 16, 23, 16, 19, 115775), 'run_name': 'classify_dataset', 'model': 'text-davinci-003'}
+
+
+Subject: Unable to Access Online Banking
+
+Description: I am unable to access my online banking account. I have tried to reset my password but it is not working. Please help.
+  - {'class': ' \n\nClass: Login Issues', 'timestamp': datetime.datetime(2023, 5, 16, 23, 16, 19, 115775), 'run_name': 'classify_dataset', 'model': 'text-davinci-003'}
+
+
+Subject: Credit Card Statement Inquiry
+
+Description: I received my credit card statement and noticed a charge that I did not make. I would like to dispute the charge and have it removed from my account.
+  - {'class': '\n\nCard Issues', 'timestamp': datetime.datetime(2023, 5, 16, 23, 16, 19, 115775), 'run_name': 'classify_dataset', 'model': 'text-davinci-003'}
+
+
+Subject: Online Banking Account Issue
+
+Message:
+
+I am having trouble logging into my online banking account. Whenever I attempt to log in, I receive an error message that says "Login failed." I have tried resetting my password and have verified that I'm entering the correct username, but the issue persists. Can you please help me with this issue?
+  - {'class': '\n\nLogin Issues', 'timestamp': datetime.datetime(2023, 5, 16, 23, 16, 19, 115775), 'run_name': 'classify_dataset', 'model': 'text-davinci-003'}
+
+
+Subject: Unable to Access Online Banking
+
+Description: I am unable to access my online banking account. I have tried logging in on both my computer and mobile devices and both times I received an error message. Please help me resolve this issue.
+  - {'class': '\n\nClass: Login Issues', 'timestamp': datetime.datetime(2023, 5, 16, 23, 16, 19, 115775), 'run_name': 'classify_dataset', 'model': 'text-davinci-003'}
+
+
+Subject: Lost Debit Card
+
+Body:
+
+Hello,
+
+I recently lost my debit card and would like to request a new one. Please let me know what information and documents I need to provide in order to get a new card.
+
+Thank you!
+  - {'class': '\n\nCard Issues', 'timestamp': datetime.datetime(2023, 5, 16, 23, 16, 19, 115775), 'run_name': 'classify_dataset', 'model': 'text-davinci-003'}
+
+
+Subject: Unable to Access Online Banking
+
+Description: I am unable to access my online banking account. When I try to login, I receive an error message that my credentials are invalid. I have tried resetting my password multiple times and still cannot log in. Please help.
+  - {'class': '\n\nClass: Login Issues', 'timestamp': datetime.datetime(2023, 5, 16, 23, 16, 19, 115775), 'run_name': 'classify_dataset', 'model': 'text-davinci-003'}
+
+
+Ticket: Debit Card Not Working
+
+Description: I recently upgraded my debit card and it is not working. I have tried to use it multiple times and it has been declined. I checked my account balance and there is enough money for the purchases. Please help!
+  - {'class': '\n\nClass: Card Issues', 'timestamp': datetime.datetime(2023, 5, 16, 23, 16, 19, 115775), 'run_name': 'classify_dataset', 'model': 'text-davinci-003'}
+
+
+Subject: Transfer From Savings to Checking
+
+Description: I need to transfer $200 from my savings account to my checking account. Please let me know what information you need from me to complete this transaction. Thank you.
+  - {'class': '\n\nClass: Card Issues', 'timestamp': datetime.datetime(2023, 5, 16, 23, 16, 19, 115775), 'run_name': 'classify_dataset', 'model': 'text-davinci-003'}
+
+
+Subject: Invalid Payment
+
+Description: I recently received a bank statement which shows an invalid payment of $150 to a merchant. I immediately contacted the merchant who confirmed that no payment was received. Please investigate this and reverse the payment as soon as possible. Thank you.
+  - {'class': '\n\nCard Issues', 'timestamp': datetime.datetime(2023, 5, 16, 23, 16, 19, 115775), 'run_name': 'classify_dataset', 'model': 'text-davinci-003'}

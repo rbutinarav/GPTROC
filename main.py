@@ -37,6 +37,19 @@ for key, default_value in session_state_variables:
     if key not in st.session_state:
         st.session_state[key] = default_value
 
+##MAIN INFORMATION
+
+st.subheader("GPT ROC")
+st.write("An integrated tool for Text Generation, Classification and Measurement")
+
+if st.session_state.text_items_list:
+    st.write("The dataset contains ", len(st.session_state.text_items_list), " items")
+
+if st.session_state.results:
+    #calculate the number of classifications in the dataset
+    classifications = len(st.session_state.results[0]["classifications"])
+    st.write("The classified dataset contains ", classifications, " classifications")
+
 ##MANAGE DATESET
 
 #ask the user if wants to create a new dataset:
@@ -54,7 +67,7 @@ if load_dataset or st.session_state.load_dataset:
 
 if st.session_state.text_items_list:
     #ask user if wants to see the list of items
-    show_list = st.sidebar.checkbox("Show list of items.")
+    show_list = st.sidebar.checkbox("Show dataset")
     if show_list:
         st.write("This is the dataset:", st.session_state.text_items_list)
 
@@ -170,7 +183,7 @@ if clear_results:
     st.session_state.load_dataset = False
     st.session_state.create_classes = False
 
-if st.session_state.classes_list:
+if st.session_state.results:
     #ask user if wants to see classified items
     show_classes_list = st.sidebar.checkbox("Show classified items")
     if show_classes_list:
