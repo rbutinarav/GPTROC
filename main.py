@@ -6,6 +6,9 @@ from create_dataset import create_dataset_df
 from load_dataset import load_dataset_df
 from save_dataset import save_dataset_df
 from create_classes import create_classes_df
+from classify_dataset import classify_dataset_df
+
+import pandas as pd
 
 #inizialize session state variables
 if "text_items_list" not in st.session_state:
@@ -20,6 +23,12 @@ if "save_dataset" not in st.session_state:
     st.session_state.save_dataset = False
 if "create_classes" not in st.session_state:
     st.session_state.create_classes = False
+if "classify_dataset" not in st.session_state:
+    st.session_state.classify_dataset = False
+if "list_class" not in st.session_state:
+    st.session_state.list_class = False
+
+
 
 #ask the user if wants to create a new dataset:
 create_dataset = st.sidebar.button("Create dataset")
@@ -61,4 +70,18 @@ if st.session_state.classes_list:
     show_list = st.sidebar.checkbox("Show list of classes.")
     if show_list:
         st.write("This is the list of classes:", st.session_state.classes_list)
+
+if st.session_state.classes_list and st.session_state.text_items_list:
+    #ask user if wants to apply classification
+    classify_dataset = st.sidebar.button("Classify dataset")
+    if classify_dataset or st.session_state.classify_dataset:
+        st.session_state.classify_dataset = True
+        classify_dataset_df(st.session_state.text_items_list, st.session_state.classes_list)
+
+    #consolidate list_items and list_class (two lists) into a pandas dataframe with two columns: items and class
+    #classified_dataset = pd.DataFrame(list(zip(st.session_state.text_items_list, st.session_state.list_class)), columns = ["items", "class"])
+    #classified_dataset = pd.DataFrame(st.session_state.text_items_list, columns = ["items"])
+    #classified_dataset["items"] = st.session_state.text_items_list
+    #classified_dataset["class"] = st.session_state.list_class
+    #st.write("This is the classified dataset:", classified_dataset)
 
