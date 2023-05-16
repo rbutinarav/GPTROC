@@ -21,5 +21,9 @@ def load_dataset_df():
         # Add the list of text items to the session state variable
         st.session_state.text_items_list = text_items_list
         st.write("The dataset has been loaded from file ", filename)
+        #calculate the numeber of items in the dataset
+        length = len(st.session_state.text_items_list)
+        st.write("The dataset contains ", length, " items")
+
 
         st.session_state.load_dataset = False

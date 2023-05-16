@@ -42,4 +42,3 @@ def classify_dataset_df(list, classes):
         st.session_state.classify_dataset = False
 
         return model, run_name, list_class
-
