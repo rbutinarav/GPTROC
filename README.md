@@ -1,49 +1,46 @@
-# GPTROC
+## GPT-ROC: An Integrated Text Analysis Tool
 
-GPTROC is a user-friendly app designed to generate datasets on any topic using OpenAI GPT models, suggest classes, train GPT-based classifier models, and evaluate their performance using ROC curve metrics. The app aims to help users find the most suitable GPT-based classification model for their data while understanding the trade-off between training sample size and model performance.
+GPT-ROC is an intuitive and powerful text analysis tool that leverages GPT-based models for Text Generation, Classification, and Measurement. The application features a user-friendly Streamlit-based interface and seamless OpenAI API integration for enhanced text analysis and classification tasks.
 
 ## Features
 
-- Generate a dataset based on any topic using OpenAI GPT models
-- Suggest classes for the classification task using clustering, topic modeling, or other unsupervised learning techniques
-- Split the dataset into training and test sets using user-defined ratios or a fixed number of samples
-- Train GPT-based classifier models for the selected classification task
-- Specify the number of items used for training the classifiers
-- Train and evaluate the selected GPT-based classifiers using confusion matrices, ROC curves, and AUC values
-- Compare the performance of different classifiers and training sample sizes
-- Interactive user interface powered by Streamlit
+- Text Generation: Generate context-aware and coherent text content based on given prompts.
+- Text Classification: Train and utilize GPT-based models to classify text into pre-defined categories.
+- Measurement: Evaluate the performance of classification models by calculating accuracy, precision, and other relevant metrics.
+- Streamlit Interface: Easy-to-use, interactive, and customizable web-based UI for streamlined workflow.
+- OpenAI API Integration: Access and harness the power of OpenAI's advanced GPT models for your text analysis tasks.
 
 ## Installation
 
 1. Clone the repository:
 
-git clone https://github.com/yourusername/GPTROC.git
+git clone https://github.com/your-username/GPT-ROC.git
 
-2. Create a virtual environment and activate it:
-
-python3 -m venv venv
-source venv/bin/activate
-
-3. Install required packages:
+2. Install the required dependencies:
 
 pip install -r requirements.txt
 
+3. Set up OpenAI API key (replace 'your-api-key' with your actual key):
+
+export OPENAI_API_KEY=your-api-key
+
+4. Run the Streamlit app:
+
+streamlit run app.py
 
 ## Usage
 
-1. Run the Streamlit app:
+Navigate to the Streamlit app in your web browser and follow the on-screen instructions to generate text, classify content, and measure model performance.
 
-streamlit run main.py
+## License
 
-2. Open the provided URL in your browser to access the interactive interface.
+This project is licensed under the MIT License.
 
-3. Input a topic, select classifiers, define training sample sizes, and view the performance metrics and plots.
+## Contributing
 
-## Dependencies
-
-- Python 3.10
-- OpenAI (for GPT models)
-- Streamlit (for the user interface)
-
-
+1. Fork the repository.
+2. Create a new branch for your feature (`git checkout -b feature/my-feature`).
+3. Commit your changes (`git commit -am 'Add my feature'`).
+4. Push to the branch (`git push origin feature/my-feature`).
+5. Create a new Pull Request.
 
